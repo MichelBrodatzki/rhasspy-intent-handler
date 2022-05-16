@@ -8,7 +8,7 @@ This software requires nodejs. All necessary dependencies can then be installed 
 The server can be run with ```node index.js```.
 
 ## Development
-To handle intents, add a new module in the folder handlers/. This module must be called \[INTENTNAME\].js and must export the function ```handleIntent(intent)```.
+To handle intents, add a new module in the folder handlers/. This module must be called \[INTENTNAME\].js and must export the function ```handleIntent(intent)``` which returns a response object.
 A demo intent is included.
 
 ## ToDo
