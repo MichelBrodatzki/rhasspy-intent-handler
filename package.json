@@ -1,0 +1,14 @@
+{
+  "name": "rhasspy-intent-handler",
+  "version": "1.0.0",
+  "description": "Provides HTTP server to handle Rhasspy intents.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michel Thomas Brodatzki",
+  "license": "MIT",
+  "dependencies": {
+    "auto-load": "^3.0.4"
+  }
+}
