@@ -9,6 +9,7 @@
   "author": "Michel Thomas Brodatzki",
   "license": "MIT",
   "dependencies": {
-    "auto-load": "^3.0.4"
+    "auto-load": "^3.0.4",
+    "node-fetch": "^2.6.7"
   }
 }

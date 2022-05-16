@@ -3,11 +3,12 @@ const handlers = require('auto-load')(__dirname + "/handlers");
 
 console.log("Starting intent handler ...");
 
-http.start("0.0.0.0", 8086, intent => {
+http.start("0.0.0.0", 8086, async function(intent) {
     if (intent['intent'] != undefined) {
         if (intent.intent['name'] != undefined) {
             if (handlers[intent.intent.name]) {
-                return handlers[intent.intent.name].handleIntent(intent);
+                const response = await handlers[intent.intent.name].handleIntent(intent);
+                return response;
             } else {
                 return {
                     "speech": {

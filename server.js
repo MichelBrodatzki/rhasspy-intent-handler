@@ -3,16 +3,14 @@ const handlers = require('auto-load')(__dirname + "/handlers");
 
 let server = null;
 
-
-
 exports.start = function(host, port, onIntentReceived) {
     const requestListener = function (req, res) {
         let response = {"error": "Internal Server Error"};
         if (req.method.toLowerCase() == "post") {
-            req.on("data", chunk => {
+            req.on("data", async function(chunk) {
                 try {
                     const intent = JSON.parse(chunk);
-                    response = onIntentReceived(intent);
+                    response = await onIntentReceived(intent);
 
                     res.setHeader("Content-Type", "application/json");
                     res.writeHead(200);
