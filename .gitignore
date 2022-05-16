@@ -1,1 +1,4 @@
 node_modules/*
+
+handlers/*
+!handlers/Demo.js
